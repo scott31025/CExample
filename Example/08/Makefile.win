@@ -1,0 +1,32 @@
+# Project: Sample13
+# Makefile created by Dev-C++ 4.9.8.0
+
+CPP  = g++.exe
+CC   = gcc.exe
+WINDRES = windres.exe
+RES  = 
+OBJ  = Sample13.o myfunc.o $(RES)
+LINKOBJ  = Sample13.o myfunc.o $(RES)
+LIBS =  -L"C:/Dev-Cpp/lib" 
+INCS =  -I"C:/Dev-Cpp/include" 
+CXXINCS =  -I"C:/Dev-Cpp/include/c++"  -I"C:/Dev-Cpp/include/c++/mingw32"  -I"C:/Dev-Cpp/include/c++/backward"  -I"C:/Dev-Cpp/include" 
+BIN  = Project13.exe
+CXXFLAGS = $(CXXINCS) 
+CFLAGS = $(INCS) 
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before Project13.exe all-after
+
+
+clean: clean-custom
+	rm -f $(OBJ) $(BIN)
+
+$(BIN): $(LINKOBJ)
+	$(CC) $(LINKOBJ) -o "Project13.exe" $(LIBS)
+
+Sample13.o: Sample13.c
+	$(CC) -c Sample13.c -o Sample13.o $(CFLAGS)
+
+myfunc.o: myfunc.c
+	$(CC) -c myfunc.c -o myfunc.o $(CFLAGS)
