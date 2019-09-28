@@ -4,7 +4,8 @@ unsigned char cnt = 0;
 
 int main(void)
 {
-    printf("歡迎使用C語言!\n");    
+    //printf("歡迎使用C語言!\n");
+	printf("Hello World");
     system("pause"); /*讓系統暫停出現"請按任意鍵繼續..."*/
     return 0;
 }
